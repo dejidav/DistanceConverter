@@ -1,0 +1,136 @@
+<RelativeLayout xmlns:android=
+    "http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editplca"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/btn_calc"
+        android:hint="Type a placeA"
+        android:layout_alignLeft="@+id/btn_calc" />
+
+    <EditText
+        android:id="@+id/editplcb"
+        android:layout_width="214dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editdist"
+        android:layout_alignStart="@+id/editplca"
+        android:layout_marginBottom="-104dp"
+        android:hint="Type a place B"
+        android:layout_alignLeft="@+id/editplca" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="175dp"
+        android:text="INSERT"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:id="@+id/btnDelete"
+        android:layout_above="@+id/btnSearch"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT *"
+        android:id="@+id/btnSelect"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/editplca"
+        android:layout_alignEnd="@+id/editplca" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        android:id="@+id/btnSearch"
+        android:layout_above="@+id/btnSelect"
+        android:layout_alignLeft="@+id/btnDelete"
+        android:layout_alignStart="@+id/btnDelete"
+        android:layout_marginBottom="32dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editSearch"
+        android:hint="name to search"
+        android:layout_alignBottom="@+id/btnSearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editDelete"
+        android:hint="name to delete"
+        android:layout_alignBottom="@+id/btnDelete"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:focusableInTouchMode="true" />
+
+    <EditText
+        android:id="@+id/editdist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/editplca"
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:hint="Type their distance"
+        android:inputType="textPersonName"
+        android:layout_alignLeft="@+id/editplca" />
+
+    <Button
+        android:id="@+id/btn_calc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/btn_save"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:text="@string/calc" />
+
+    <RadioGroup
+        android:layout_width="88dp"
+        android:layout_height="58dp"
+        android:layout_alignBottom="@+id/btn_save"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-58dp" >
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="134dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="KM" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Miles" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/btn_save"
+        android:text="view"
+        android:layout_alignLeft="@+id/btn_save" />
+</RelativeLayout>
